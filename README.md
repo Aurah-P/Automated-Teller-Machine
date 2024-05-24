@@ -6,6 +6,23 @@ The proliferation of embedded systems has enabled the development of innovative 
 
 The project leveraged several key components to achieve its functionality. The Raspberry Pi Pico served as the central processing unit, storing user account information and managing the overall system. An RC522 RFID module was used to read users' RFID cards, providing a secure and convenient method for user authentication. An OLED display was incorporated to guide users through various processes, displaying prompts and transaction details. A servo motor was employed to control the physical movement of money, simulating the dispensing and receiving mechanisms of a real ATM. Finally, a standard keyboard was used for user input, allowing navigation through the different ATM functions.
 
+**CIRCUIT DIAGRAM**
+| RSP Pico  |   RC522 |
+| --------- | ------ |
+| 0         |   RST  |
+| 1         |   SDA  |
+| 2         |   SCK  |
+| 3         |   MOSI |
+| 4         |   MISO |
+
+| RSP Pico  |  OLED  |
+| --------- | ------ |
+| 16        |  CS    |
+| 17        |  DC    |
+| 18        |  SCK   |
+| 19        |  MOSI  |
+| 20        |  RST   |
+
 **DISCUSSION**
 
 The project began with the configuration and programming of the Raspberry Pi Pico. The microcontroller was programmed using MicroPython, which facilitated the integration of various peripherals. User account information, including account balances, was stored in the Pico's memory. The RC522 RFID module was connected to the Pico and programmed to read card data, ensuring secure access to the ATM system.
